@@ -25,7 +25,7 @@ int main()
     
     for (int i = 0; i < ar_length; i++)
     {
-        assert((uintptr_t)ar[i] % (uintptr_t) (alignof (struct fam_struct)) == 0);
+        assert((uintptr_t)ar[i] % (int) (alignof (struct fam_struct)) == 0);
         ar[i]->len = fam_length;
     }
     
